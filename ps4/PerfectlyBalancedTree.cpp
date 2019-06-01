@@ -23,7 +23,7 @@ PerfectlyBalancedTree::treeFor(size_t low, size_t high) {
   size_t mid = low + (high - low) / 2;
   return new Node {
     mid,
-    NULL,
+    "NULL",
     treeFor(low, mid),
     treeFor(mid + 1, high)
   };
@@ -80,7 +80,5 @@ bool PerfectlyBalancedTree::contains(size_t key) const {
       }
       curr = curr->right;
     }
-    
-    curr = (key < curr->key? curr->left : curr->right);
   }
 }
