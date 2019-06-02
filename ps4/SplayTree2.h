@@ -3,7 +3,6 @@
 
 #include <string>
 #include <cstddef>
-
 /**
  * A type representing a binary search tree backed by a splay tree.
  */
@@ -29,8 +28,7 @@ public:
    * method using the top-down splaying technique outlined in Sleator and
    * Tarjan's original paper.
    */
-  bool contains(std::size_t key) const;
-  
+  bool contains(std::size_t key);
   /**
    * Returns a human-readable name of this type.
    */
@@ -43,7 +41,6 @@ private:
     std::size_t key;
     Node* left;
     Node* right;
-    
     /* Note: Since you'll be implementing top-down splaying, you should *not*
      * add a parent pointer here. You won't be needing it.
      */
@@ -67,15 +64,9 @@ private:
    */
   static Node* treeFor(std::size_t low, std::size_t high);
   
-  // -----------------------------------------------------------
-  // Helper methods for splaying process
-  // Documented in SplayTree.cpp
-  void linkLeft(Node* &t, Node* &l) const;
-  void linkRight(Node* &t, Node* &r) const;
-  void rotateLeft(Node* &t) const;
-  void rotateRight(Node* &t) const;
-  void assemble(Node* &t, Node* &l, Node* &r, Node* super) const;
-  // ------------------------------------------------------------
+  // TODO: Add any necessary new types or fields here.
+
+
 
   /* Fun with C++: these next two lines disable implicitly-generated copy
    * functions that would otherwise cause weird errors if you tried to
