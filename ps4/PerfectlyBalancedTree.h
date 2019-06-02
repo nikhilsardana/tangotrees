@@ -24,9 +24,7 @@ public:
    * Searches the tree for the given key, returning whether or not that key is
    * present in the tree.
    */
-  bool contains(std::size_t key);
-  
-  std::size_t resetAlternations();
+  bool contains(std::size_t key) const;
 
   /**
    * Returns a human-readable name of this type.
@@ -43,8 +41,6 @@ private:
     Node* left;
     Node* right;
   };
-
-  std::size_t alternations;
   
   /* Pointer to the root. */
   Node* root;

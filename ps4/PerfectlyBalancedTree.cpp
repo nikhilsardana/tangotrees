@@ -1,6 +1,9 @@
 #include "PerfectlyBalancedTree.h"
+#include "global.h"
 using namespace std;
 
+
+int numalts;
 PerfectlyBalancedTree::PerfectlyBalancedTree(size_t nElems) {
   root = treeFor(0, nElems);
 }
@@ -20,6 +23,7 @@ PerfectlyBalancedTree::treeFor(size_t low, size_t high) {
   size_t mid = low + (high - low) / 2;
   return new Node {
     mid,
+    NULL,
     treeFor(low, mid),
     treeFor(mid + 1, high)
   };
@@ -60,6 +64,22 @@ bool PerfectlyBalancedTree::contains(size_t key) const {
   while (true) {
     if (curr == nullptr)  return false;
     if (curr->key == key) return true;
+    
+    string prev_pref = curr->pref;
+
+    if (key < curr->key) {
+      curr->pref = "L";
+      if (prev_pref == "R") {
+        numalts++;
+      }
+      curr = curr->left;
+    } else {
+      curr->pref = "R";
+      if (prev_pref == "L") {
+        numalts++;
+      }
+      curr = curr->right;
+    }
     
     curr = (key < curr->key? curr->left : curr->right);
   }
