@@ -11,6 +11,7 @@ ostream& operator<< (ostream& out, const TimingResults& results) {
   ostringstream builder;
   builder << "Build time: " << results.buildTime << "  "
           << "Query time: " << results.queryTime;
+  cout << endl;
   cout << "numops " << numops << endl;
   cout << "num alternations " << numalts << endl;
   numalts = 0;

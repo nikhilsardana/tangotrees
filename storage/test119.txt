@@ -1,0 +1,89 @@
+Correctness Tests
+  Perfectly Balanced Tree:     Pass
+  Splay Tree:                  Pass
+  std::set:                    Pass
+
+Accessing Elements With a Uniform Distribution
+  Perfectly Balanced Tree: 
+ numops 55656548
+num alternations 35790255
+Build time:    11.26ms  Query time:  1449.80ms
+  Splay Tree:              
+ numops 53384426
+num alternations 0
+Build time:     7.92ms  Query time:   918.06ms
+  std::set:                
+ numops 0
+num alternations 0
+Build time:    85.04ms  Query time:  1063.91ms
+
+Sequential Access
+  Perfectly Balanced Tree: 
+ numops 0
+num alternations 262143
+Build time:    10.51ms  Query time:   125.86ms
+  Splay Tree:              
+ numops 2264315
+num alternations 0
+Build time:     7.81ms  Query time:    15.96ms
+  std::set:                
+ numops 0
+num alternations 0
+Build time:    85.58ms  Query time:    68.53ms
+
+Reverse Sequential Access
+  Perfectly Balanced Tree: 
+ numops 0
+num alternations 262143
+Build time:    12.00ms  Query time:   136.45ms
+  Splay Tree:              
+ numops 2264312
+num alternations 0
+Build time:     8.45ms  Query time:    15.13ms
+  std::set:                
+ numops 0
+num alternations 0
+Build time:    80.23ms  Query time:    61.33ms
+
+Accessing Randomly-Chosen Working Sets
+  Perfectly Balanced Tree: 
+ numops 0
+num alternations 782274
+Build time:    10.24ms  Query time:    83.78ms
+  Splay Tree:              
+ numops 1845294
+num alternations 0
+Build time:     7.84ms  Query time:    14.47ms
+  std::set:                
+ numops 0
+num alternations 0
+Build time:    71.56ms  Query time:    40.86ms
+
+Accessing Elements with Low Rank Differences
+  Perfectly Balanced Tree: 
+ numops 0
+num alternations 5070542
+Build time:     8.56ms  Query time:   570.65ms
+  Splay Tree:              
+ numops 17308267
+num alternations 0
+Build time:     7.81ms  Query time:   144.58ms
+  std::set:                
+ numops 0
+num alternations 0
+Build time:    91.22ms  Query time:   288.56ms
+
+Accessing Elements with A Zipf(0.500) Distribution
+  Perfectly Balanced Tree: 
+ numops 0
+num alternations 17368067
+Build time:    10.88ms  Query time:  1606.31ms
+  Splay Tree:              
+ numops 51845795
+num alternations 0
+Build time:     8.82ms  Query time:  1168.73ms
+  std::set:                
+ numops 0
+num alternations 0
+Build time:    70.73ms  Query time:  1174.87ms
+

@@ -1,0 +1,25 @@
+Correctness Tests
+  Perfectly Balanced Tree:     Pass
+  Splay Tree:                  Pass
+
+Accessing Elements With a Uniform Distribution
+  Perfectly Balanced Tree: 
+ numops 42609282
+num alternations 35790255
+Build time:    52.20ms  Query time:  7983.80ms
+  Splay Tree:              
+ numops 40861445
+num alternations 0
+Build time:     9.47ms  Query time:  1001.25ms
+
+Sequential Access
+  Perfectly Balanced Tree: 
+ numops 0
+num alternations 262143
+Build time:    57.66ms  Query time:  1730.63ms
+  Splay Tree:              
+ numops 1740048
+num alternations 0
+Build time:    12.78ms  Query time:    24.54ms
+
+Reverse Sequential Access

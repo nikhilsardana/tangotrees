@@ -17,7 +17,7 @@ namespace {
    * Size of the trees that will be created for testing purposes. Larger trees
    * have more nodes, but take a little more time to create.
    */
-  const size_t kTreeSize = 1u << 18u;
+  const size_t kTreeSize = 1u << 22u;
 
   /* Constant: kNumLookups 
    * --------------------------------------------------------------------------
@@ -222,12 +222,12 @@ namespace {
    */
   using AllTrees = TypeList<
                      PerfectlyBalancedTree,
-                     WeightBalancedTree,
+                     //WeightBalancedTree,
                      SplayTree,
-                     StdSetTree,
-                     SortedArray,
-                     FingerArray,
-                     HashTable
+                     StdSetTree
+                     //SortedArray,
+                     //FingerArray,
+                     //HashTable
                    >;
 
   /* Type: AllTests
@@ -242,15 +242,15 @@ namespace {
                      ReverseSequentialAccessTests,
                      WorkingSetTests,
                      DynamicFingerTests,
-                     ZipfianTests< 500>,
-                     ZipfianTests< 750>,
-                     ZipfianTests<1000>,
-                     ZipfianTests<1200>,
-                     ZipfianTests<1300>
+                     ZipfianTests< 500>
+                     //ZipfianTests< 750>,
+                     //ZipfianTests<1000>,
+                     //ZipfianTests<1200>,
+                     //ZipfianTests<1300>
                    >;
 }
 
-int main() {
-  /* Run all the tests we have on all the types of trees we care about. */
+int main(int argc, char* argv[]) {
+/* Run all the tests we have on all the types of trees we care about. */
   runTests(AllTrees(), AllTests());
 }

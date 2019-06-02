@@ -1,8 +1,11 @@
 #include "SplayTree.h"
+#include "global.h"
 using namespace std;
 
+int numops;
 SplayTree::SplayTree(size_t nElems) {
   root = treeFor(0, nElems);
+  numops = 0;
 }
 
 /**
@@ -140,30 +143,38 @@ bool SplayTree::contains(size_t key) const {
       if (!t->left) break; // key not present
       if (key == t->left->key) {
         linkRight(t, r);
+		numops += 1;
       } else if (key < t->left->key) {
         rotateRight(t);
+		numops += 1;
         if (!t->left) break; // check again, in case rotation made t->left null
         linkRight(t, r);
+		numops +=1;
       } else /* key > t->left->key) */ {
         linkRight(t, r);
         linkLeft(t, l);
+		numops += 2;
       }
     } else /* key > t-> key */ {
       if (!t->right) break; // key not present
       if (key == t->right->key) {
         linkLeft(t,l);
+		numops += 1;
       } else if (key > t->right->key) {
         rotateLeft(t);
+		numops += 1;
         if (!t->right) break; // check again, in case rotation made t->right null
         linkLeft(t, l);
+		numops +=1;
       } else /* key < t->right->key) */ {
         linkLeft(t, l);
         linkRight(t, r);
+		numops +=2;
       }
     }
   }
   assemble(t, l, r, &super);
-
+  numops += 1;
   // t is either the right node, or its in-order successor/predecessor
   return (t->key == key);
 }

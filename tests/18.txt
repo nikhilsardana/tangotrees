@@ -1,0 +1,104 @@
+Correctness Tests
+  Perfectly Balanced Tree:     Pass
+  Splay Tree:                  Pass
+
+Accessing Elements With a Uniform Distribution
+  Perfectly Balanced Tree: 
+ numops 20183900
+num alternations 16854213
+Build time:    24.41ms  Query time:  3515.69ms
+  Splay Tree:              
+ numops 19309819
+num alternations 0
+Build time:     4.55ms  Query time:   348.83ms
+
+Sequential Access
+  Perfectly Balanced Tree: 
+ numops 0
+num alternations 131071
+Build time:    27.27ms  Query time:   800.00ms
+  Splay Tree:              
+ numops 869792
+num alternations 0
+Build time:     6.19ms  Query time:    11.50ms
+
+Reverse Sequential Access
+  Perfectly Balanced Tree: 
+ numops 0
+num alternations 131071
+Build time:    27.37ms  Query time:   795.71ms
+  Splay Tree:              
+ numops 869790
+num alternations 0
+Build time:     6.12ms  Query time:    11.19ms
+
+Accessing Randomly-Chosen Working Sets
+  Perfectly Balanced Tree: 
+ numops 0
+num alternations 781627
+Build time:    27.18ms  Query time:   816.76ms
+  Splay Tree:              
+ numops 1542027
+num alternations 0
+Build time:     4.55ms  Query time:    20.95ms
+
+Accessing Elements with Low Rank Differences
+  Perfectly Balanced Tree: 
+ numops 0
+num alternations 2532737
+Build time:    23.55ms  Query time:  3211.74ms
+  Splay Tree:              
+ numops 7156124
+num alternations 0
+Build time:     4.56ms  Query time:    90.95ms
+
+Accessing Elements with A Zipf(0.500) Distribution
+  Perfectly Balanced Tree: 
+ numops 0
+num alternations 8161137
+Build time:    24.56ms  Query time:  3527.27ms
+  Splay Tree:              
+ numops 18757176
+num alternations 0
+Build time:     4.55ms  Query time:   378.28ms
+
+Accessing Elements with A Zipf(0.750) Distribution
+  Perfectly Balanced Tree: 
+ numops 0
+num alternations 7577445
+Build time:    24.64ms  Query time:  3492.94ms
+  Splay Tree:              
+ numops 17059232
+num alternations 0
+Build time:     4.55ms  Query time:   335.47ms
+
+Accessing Elements with A Zipf(1.000) Distribution
+  Perfectly Balanced Tree: 
+ numops 0
+num alternations 5803446
+Build time:    25.03ms  Query time:  3364.76ms
+  Splay Tree:              
+ numops 12563965
+num alternations 0
+Build time:     4.57ms  Query time:   231.78ms
+
+Accessing Elements with A Zipf(1.200) Distribution
+  Perfectly Balanced Tree: 
+ numops 0
+num alternations 3895241
+Build time:    24.75ms  Query time:  3251.42ms
+  Splay Tree:              
+ numops 8178586
+num alternations 0
+Build time:     4.58ms  Query time:   140.19ms
+
+Accessing Elements with A Zipf(1.300) Distribution
+  Perfectly Balanced Tree: 
+ numops 0
+num alternations 3105100
+Build time:    24.73ms  Query time:  3326.61ms
+  Splay Tree:              
+ numops 6529092
+num alternations 0
+Build time:     4.57ms  Query time:   108.75ms
+
